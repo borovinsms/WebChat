@@ -14,6 +14,6 @@ class SettingsTest {
         String[] settingsArray = settings.split(":");
 
         Assertions.assertEquals(settingsArray[0],serverSettings.getHost());
-        Assertions.assertEquals(settingsArray[1],serverSettings.getPort());
+        Assertions.assertEquals(Integer.parseInt(settingsArray[1]),serverSettings.getPort());
     }
 }
